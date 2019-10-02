@@ -6,24 +6,33 @@ let step =0;
 const timeDisplay = document.getElementById("time");
 
 const help_tab = [
-	`Je suis l'aide 1`,
-	`Je suis l'aide 2.1`,
-	`Je suis l'aide 2.2`,
-	`Je suis l'aide 3`,
-	`Je suis l'aide 4`,
-	`Je suis l'aide 5`,
+	`Utilisez votre ordinateur de poche pour lire les étranges symboles durant votre escape.`,
+	`Le code du cadenas est formé par le chemin.`,
+	`Les calculs sont faux.`,
+	`Sur votre ordinateur, vous trouverez un modèle de tube à essai.`,
+	`Trouvez la quantité de Dysprosium en millilitres. Vous pouvez vous aidez de votre ordinateur. `,
+	`Aidez-vous des éléments que vous avez trouvé.`,
 ]
 
 const description = [
-	`Trouver la quantité d’Erbium nécessaire pour le remède.`,
-	`Trouver le nom du produit argenté.`,
-	`Trouver le nom du troisième produit nécessaire à la création du remède.`,
-	`Trouver le nom du troisième produit nécessaire à la création du remède.`,
-	`Trouver la quantité en mL de Dysprosium nécessaire à la création du remède.`,
-	`Trouver le code du coffre fort`,
+	`Trouvez la quantité d’Erbium nécessaire pour le remède.`,
+	`Trouvez le code du cadenas`,
+	`Trouvez le nom du troisième produit nécessaire à la création du remède.`,
+	`Trouvez le nom du produit argenté.`,
+	`Trouvez la quantité en mL de Dysprosium nécessaire à la création du remède.`,
+	`Trouvez le code du coffre fort`,
 	`Bravo vous avez fini !`,
 ]
 
+const answer =[
+	`start`,
+	`0,7`,
+	`956`,
+	`chlore`,
+	`osmium`,
+	`0,4`,
+	`5247`,
+]
 
 document.addEventListener('DOMContentLoaded', function() {
 	const help = document.getElementsByClassName('help');
@@ -85,7 +94,7 @@ function sendMessage(msg){
 	const green_dark_4 = document.getElementsByClassName('green_dark_4');
 	const red_5 = document.getElementsByClassName('red_5');
 
-    if (msg=='start'&& step==0)
+    if (msg==answer[0]&& step==0)
     {
 		startCountdown();
 		content.style.color='white';
@@ -97,7 +106,7 @@ function sendMessage(msg){
 		
 		
 	}
-	else if (msg=='stage1'&& step==1){
+	else if (msg==answer[1]&& step==1){
 		content.innerHTML=description[1];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
@@ -109,14 +118,14 @@ function sendMessage(msg){
 
 
 	}
-	else if (msg=='stage2'&& step==2){
+	else if (msg==answer[2]&& step==2){
 		content.innerHTML=description[2];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 		yellow_2[0].classList.toggle('active');
 
 	}
-	else if (msg=='stage3'&& step==3){
+	else if (msg==answer[3]&& step==3){
 		content.innerHTML=description[3];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
@@ -124,7 +133,7 @@ function sendMessage(msg){
 		red_2[0].classList.toggle('active');
 
 	}
-	else if (msg=='stage4'&& step==4){
+	else if (msg==answer[4]&& step==4){
 		content.innerHTML=description[4];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
@@ -132,7 +141,7 @@ function sendMessage(msg){
 		yellow_dark_3[0].classList.toggle('active');
 
 	}
-	else if (msg=='stage5'&& step==5){
+	else if (msg==answer[5]&& step==5){
 		content.innerHTML=description[5];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
@@ -141,7 +150,7 @@ function sendMessage(msg){
 
 	}
 
-    else if (msg=='stop'&& step==6){
+    else if (msg==answer[6]&& step==6){
 		document.getElementById("time").style.color='green';
 		content.innerHTML=description[6];
 		stepCount.innerHTML = 'Étape : ' + step;
