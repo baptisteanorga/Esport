@@ -7,35 +7,23 @@ const timeDisplay = document.getElementById("time");
 
 const help_tab = [
 	`Je suis l'aide 1`,
-	`Je suis l'aide 2`,
+	`Je suis l'aide 2.1`,
+	`Je suis l'aide 2.2`,
 	`Je suis l'aide 3`,
 	`Je suis l'aide 4`,
 	`Je suis l'aide 5`,
 ]
 
-// console.log(help_tab)
+const description = [
+	`Trouver la quantité d’Erbium nécessaire pour le remède.`,
+	`Trouver le nom du produit argenté.`,
+	`Trouver le nom du troisième produit nécessaire à la création du remède.`,
+	`Trouver le nom du troisième produit nécessaire à la création du remède.`,
+	`Trouver la quantité en mL de Dysprosium nécessaire à la création du remède.`,
+	`Trouver le code du coffre fort`,
+	`Bravo vous avez fini !`,
+]
 
-// document.addEventListener('DOMContentLoaded', function() {
-// 	const help_1 = document.getElementsByClassName('help_1');
-	
-// 	help_1[step].addEventListener('click',()=>{
-// 		console.log('coucou')
-// 	})
-	
-// 	help_1[0].addEventListener('mouseover',()=>{
-// 		const helper = document.getElementsByClassName('helper');
-// 		if(step==1)
-// 		{
-// 			helper[step-1].classList.toggle('active');
-// 			helper[step-1].innerHTML='Je suis la description 1';
-			
-// 		}
-// 				help_1[step-1].addEventListener('mouseout',()=>{
-// 					helper[step-1].classList.toggle('active')
-// 				})
-// 	})
-	
-// }, false);
 
 document.addEventListener('DOMContentLoaded', function() {
 	const help = document.getElementsByClassName('help');
@@ -54,20 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	}
 }, false);
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
 
 document.addEventListener('keyup', function onEvent(e) {
     if (e.keyCode === 13)
@@ -116,7 +90,7 @@ function sendMessage(msg){
 		startCountdown();
 		content.style.color='white';
 
-		content.innerHTML=`Chercher la solution 1`;
+		content.innerHTML=description[0];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 
@@ -124,7 +98,7 @@ function sendMessage(msg){
 		
 	}
 	else if (msg=='stage1'&& step==1){
-		content.innerHTML='Étape 1 réussie, go step 2';
+		content.innerHTML=description[1];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 
@@ -136,24 +110,30 @@ function sendMessage(msg){
 
 	}
 	else if (msg=='stage2'&& step==2){
-		content.innerHTML=`Bravo vous avez réussi l'étape 2, on passe à la suite`;
+		content.innerHTML=description[2];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 		yellow_2[0].classList.toggle('active');
+
+	}
+	else if (msg=='stage3'&& step==3){
+		content.innerHTML=description[3];
+		step++;
+		stepCount.innerHTML = 'Étape : ' + step;
 		green_2[0].classList.toggle('active');
 		red_2[0].classList.toggle('active');
 
 	}
-	else if (msg=='stage3'&& step==3){
-		content.innerHTML=`Bravo vous avez réussi l'étape 2, on passe à la suite`;
+	else if (msg=='stage4'&& step==4){
+		content.innerHTML=description[4];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 		yellow_3[0].classList.toggle('active');
 		yellow_dark_3[0].classList.toggle('active');
 
 	}
-	else if (msg=='stage4'&& step==4){
-		content.innerHTML=`Bravo vous avez réussi l'étape 2, on passe à la suite`;
+	else if (msg=='stage5'&& step==5){
+		content.innerHTML=description[5];
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 		green_4[0].classList.toggle('active');
@@ -161,15 +141,15 @@ function sendMessage(msg){
 
 	}
 
-    else if (msg=='stop'&& step==5){
+    else if (msg=='stop'&& step==6){
 		document.getElementById("time").style.color='green';
-		content.innerHTML='Bravo vous avez réussi !';
+		content.innerHTML=description[6];
 		stepCount.innerHTML = 'Étape : ' + step;
 		clearInterval(intervalHandle);
 		red_5[0].classList.toggle('active');
 
 	}
-	else if (step!=0||step!=5)
+	else if (step!=0||step!=6)
 	{
 		content.innerHTML='Ceci ne fera pas avancer le remède';
 	}
