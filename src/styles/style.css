@@ -1,0 +1,131 @@
+body{
+    background-color: #657AA1;
+}
+
+h1#time{
+    color:white;
+}
+
+div#content{
+    color :#657AA1;
+}
+
+div#step{
+    color:white;
+}
+
+div.container{
+    position: relative;
+}
+
+div.bg
+{
+    position: absolute;
+    width: 900px;
+    height: 555px;
+    background-color: #fff;
+}
+
+div.container>img{
+    position: absolute;
+}
+
+img.map{
+    width: 900px;
+}
+
+/** Red_1 */
+img.red_1{
+    width: 74px;
+    top: 283px;
+    left: 196px;
+    transition-property: top; 
+    transition-duration: 2s;
+}
+
+
+
+img.red_1.active{
+    top: 320px;
+}
+
+img.red_dark_1{
+    width: 40px;
+    top: 283px;
+    left: 196px;
+    transition-property: top; 
+    transition-duration: 3s;
+}
+
+img.red_dark_1.active{
+    top: 320px; 
+}
+
+/** Yellow_2*/
+img.yellow_2{
+    width: 15px;
+    top: 366px;
+    left: 336px;
+    transition-property: top; 
+    transition-duration: 2s;
+}
+
+img.yellow_2.active{
+    top: 426px;
+}
+
+/** Green_2 */
+img.green_2{
+    width: 15px;
+    top: 366px;
+    left: 376px;
+    transition-property: top; 
+    transition-duration: 4s;
+}
+
+img.green_2.active{
+    top: 426px;
+}
+
+/** Red_2 */
+img.red_2{
+    width: 15px;
+    top: 366px;
+    left: 417px;
+    transition-property: top; 
+    transition-duration: 3s;
+}
+img.red_2.active{
+    top: 426px;
+}
+
+/** Yellow_3 */
+img.yellow_3{
+    width: 57px;
+    top: 153px;
+    left: 537px;
+}
+
+img.yellow_dark_3{
+    width: 24px;
+    top: 153px;
+    left: 557px;
+}
+
+img.green_4{
+    width: 76px;
+    top: 383px;
+    left: 564px;
+}
+
+img.dark_green_4{
+    width: 44px;
+    top: 381px;
+    left: 563px;
+}
+
+img.red_5{
+    width: 18px;
+    top: 260px;
+    left: 793px;
+}
