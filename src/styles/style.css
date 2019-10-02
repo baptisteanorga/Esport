@@ -1,5 +1,5 @@
 body{
-    background-color: #657AA1;
+    background-color: #32B5B0;
     overflow:hidden;
 }
 
@@ -8,7 +8,7 @@ h1#time{
 }
 
 div#content{
-    color :#657AA1;
+    color :#32B5B0;
 }
 
 div#step{
@@ -22,7 +22,8 @@ div.container{
 div.bg
 {
     position: absolute;
-    width: 900px;
+    width: 880px;
+    margin-left:2px;
     height: 555px;
     background-color: #fff;
 }
@@ -114,6 +115,7 @@ img.yellow_3.active{
     top: 153px;
 }
 
+/** Yellow_dark_3 */
 img.yellow_dark_3{
     top: 200px;
     width: 24px;
@@ -125,6 +127,7 @@ img.yellow_dark_3.active{
     top: 153px;
 }
 
+/** Green_4 */
 img.green_4{    
     top: 423px;
     width: 76px;
@@ -137,6 +140,7 @@ img.green_4.active{
     top: 383px;
 }
 
+/** Green_dark_4 */
 img.green_dark_4{
     top: 421px;
     width: 44px;
@@ -148,6 +152,7 @@ img.green_dark_4.active{
     top: 381px;
 }
 
+/** Red_5 */
 img.red_5{
     width: 18px;
     top: 1000px;
@@ -161,8 +166,60 @@ img.red_5.active{
 
 div.blue{
     position: absolute;
-    background-color: #657AA1;
+    background-color: #32B5B0;
     top:470px;
-    height: 200px;
+    height: 1000px;
     width: 1000px;
+}
+
+div#helper{
+    position: absolute;
+}
+div#helper.active{
+    visibility: hidden;
+}
+
+button.help{
+    position: absolute;
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+button.help_1{
+    width: 72px;
+    height: 72px;
+    top: 248px;
+    left: 197px;
+    border-radius: 100px;
+}
+
+button.help_2{
+    width: 122px;
+    height: 92px;
+    top: 348px;
+    left: 324px;
+    border-radius: 0;
+}
+
+button.help_3{
+    height: 50px;
+    width: 60px;
+    top: 134px;
+    left: 535px;
+}
+
+button.help_4{
+    width: 80px;
+    height: 80px;
+    top: 342px;
+    left: 562px;
+    border-radius: 100px;
+}
+
+button.help_5{
+    width: 21px;
+    height: 177px;
+    top: 262px;
+    left: 791px;
 }

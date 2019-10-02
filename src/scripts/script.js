@@ -5,6 +5,67 @@ let minutes = 60;
 let step =0;
 const timeDisplay = document.getElementById("time");
 
+const help_tab = [
+	`Je suis l'aide 1`,
+	`Je suis l'aide 2`,
+	`Je suis l'aide 3`,
+	`Je suis l'aide 4`,
+	`Je suis l'aide 5`,
+]
+
+// console.log(help_tab)
+
+// document.addEventListener('DOMContentLoaded', function() {
+// 	const help_1 = document.getElementsByClassName('help_1');
+	
+// 	help_1[step].addEventListener('click',()=>{
+// 		console.log('coucou')
+// 	})
+	
+// 	help_1[0].addEventListener('mouseover',()=>{
+// 		const helper = document.getElementsByClassName('helper');
+// 		if(step==1)
+// 		{
+// 			helper[step-1].classList.toggle('active');
+// 			helper[step-1].innerHTML='Je suis la description 1';
+			
+// 		}
+// 				help_1[step-1].addEventListener('mouseout',()=>{
+// 					helper[step-1].classList.toggle('active')
+// 				})
+// 	})
+	
+// }, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+	const help = document.getElementsByClassName('help');
+	const helper = document.getElementById('helper');
+	for(let i = 0; i < help.length; i++) {
+		help[i].addEventListener("mouseenter", function() {
+			if(step-1==i){
+
+				helper.classList.toggle('active');
+				helper.innerHTML=help_tab[i];
+			}
+			help[i].addEventListener('mouseleave',()=>{
+				console.log('parti')
+				helper.classList.toggle('active');
+			})			
+		})
+	}
+}, false);
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
@@ -58,33 +119,57 @@ function sendMessage(msg){
 		content.innerHTML=`Chercher la solution 1`;
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
-		red_1[0].classList.toggle('active');
-		red_dark_1[0].classList.toggle('active');
-		yellow_2[0].classList.toggle('active');
-		green_2[0].classList.toggle('active');
-		red_2[0].classList.toggle('active');
-		yellow_3[0].classList.toggle('active');
-		yellow_dark_3[0].classList.toggle('active');
-		green_4[0].classList.toggle('active');
-		green_dark_4[0].classList.toggle('active');
-		red_5[0].classList.toggle('active');
+
+		
 		
 	}
-	else if (msg=='stage'&& step==1){
+	else if (msg=='stage1'&& step==1){
 		content.innerHTML='Étape 1 réussie, go step 2';
 		step++;
 		stepCount.innerHTML = 'Étape : ' + step;
 
-	}
-	
+		red_1[0].classList.toggle('active');
+		red_dark_1[0].classList.toggle('active');
+		
+		
 
-    else if (msg=='stop'&& step==2){
+
+	}
+	else if (msg=='stage2'&& step==2){
+		content.innerHTML=`Bravo vous avez réussi l'étape 2, on passe à la suite`;
+		step++;
+		stepCount.innerHTML = 'Étape : ' + step;
+		yellow_2[0].classList.toggle('active');
+		green_2[0].classList.toggle('active');
+		red_2[0].classList.toggle('active');
+
+	}
+	else if (msg=='stage3'&& step==3){
+		content.innerHTML=`Bravo vous avez réussi l'étape 2, on passe à la suite`;
+		step++;
+		stepCount.innerHTML = 'Étape : ' + step;
+		yellow_3[0].classList.toggle('active');
+		yellow_dark_3[0].classList.toggle('active');
+
+	}
+	else if (msg=='stage4'&& step==4){
+		content.innerHTML=`Bravo vous avez réussi l'étape 2, on passe à la suite`;
+		step++;
+		stepCount.innerHTML = 'Étape : ' + step;
+		green_4[0].classList.toggle('active');
+		green_dark_4[0].classList.toggle('active');
+
+	}
+
+    else if (msg=='stop'&& step==5){
 		document.getElementById("time").style.color='green';
 		content.innerHTML='Bravo vous avez réussi !';
 		stepCount.innerHTML = 'Étape : ' + step;
 		clearInterval(intervalHandle);
+		red_5[0].classList.toggle('active');
+
 	}
-	else if (step!=0||step!=2)
+	else if (step!=0||step!=5)
 	{
 		content.innerHTML='Ceci ne fera pas avancer le remède';
 	}
