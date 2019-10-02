@@ -1,5 +1,6 @@
 body{
     background-color: #657AA1;
+    overflow:hidden;
 }
 
 h1#time{
@@ -37,7 +38,7 @@ img.map{
 /** Red_1 */
 img.red_1{
     width: 74px;
-    top: 283px;
+    top: 320px;
     left: 196px;
     transition-property: top; 
     transition-duration: 2s;
@@ -46,86 +47,122 @@ img.red_1{
 
 
 img.red_1.active{
-    top: 320px;
+    top: 283px;
 }
 
 img.red_dark_1{
+    top: 320px; 
     width: 40px;
-    top: 283px;
     left: 196px;
     transition-property: top; 
     transition-duration: 3s;
 }
 
 img.red_dark_1.active{
-    top: 320px; 
+    top: 283px;
 }
 
 /** Yellow_2*/
 img.yellow_2{
+    top: 426px;
     width: 15px;
-    top: 366px;
+   
     left: 336px;
     transition-property: top; 
     transition-duration: 2s;
 }
 
 img.yellow_2.active{
-    top: 426px;
+    top: 366px;
 }
 
 /** Green_2 */
 img.green_2{
+    top: 426px;
     width: 15px;
-    top: 366px;
     left: 376px;
     transition-property: top; 
     transition-duration: 4s;
 }
 
-img.green_2.active{
-    top: 426px;
+img.green_2.active{ 
+    top: 366px;
 }
 
 /** Red_2 */
 img.red_2{
+    top: 426px;
     width: 15px;
-    top: 366px;
     left: 417px;
     transition-property: top; 
     transition-duration: 3s;
 }
 img.red_2.active{
-    top: 426px;
+    top: 366px;
 }
 
 /** Yellow_3 */
 img.yellow_3{
+    top: 200px;
     width: 57px;
-    top: 153px;
     left: 537px;
+    transition-property: top; 
+    transition-duration: 2s;
+}
+
+img.yellow_3.active{
+    top: 153px;
 }
 
 img.yellow_dark_3{
+    top: 200px;
     width: 24px;
-    top: 153px;
     left: 557px;
+    transition-property: top; 
+    transition-duration: 2s;
+}
+img.yellow_dark_3.active{
+    top: 153px;
 }
 
-img.green_4{
+img.green_4{    
+    top: 423px;
     width: 76px;
-    top: 383px;
     left: 564px;
+    transition-property: top; 
+    transition-duration: 2s;
 }
 
-img.dark_green_4{
+img.green_4.active{
+    top: 383px;
+}
+
+img.green_dark_4{
+    top: 421px;
     width: 44px;
-    top: 381px;
     left: 563px;
+    transition-property: top; 
+    transition-duration: 2s;
+}
+img.green_dark_4.active{
+    top: 381px;
 }
 
 img.red_5{
     width: 18px;
-    top: 260px;
+    top: 1000px;
     left: 793px;
+    transition-property: top; 
+    transition-duration: 2s;
+}
+img.red_5.active{
+    top: 260px;
+}
+
+div.blue{
+    position: absolute;
+    background-color: #657AA1;
+    top:470px;
+    height: 200px;
+    width: 1000px;
 }

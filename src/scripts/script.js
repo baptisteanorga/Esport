@@ -44,6 +44,11 @@ function sendMessage(msg){
 	const yellow_2 = document.getElementsByClassName('yellow_2');
 	const green_2 = document.getElementsByClassName('green_2');
 	const red_2 = document.getElementsByClassName('red_2');
+	const yellow_3 = document.getElementsByClassName('yellow_3');
+	const yellow_dark_3 = document.getElementsByClassName('yellow_dark_3');
+	const green_4 = document.getElementsByClassName('green_4');
+	const green_dark_4 = document.getElementsByClassName('green_dark_4');
+	const red_5 = document.getElementsByClassName('red_5');
 
     if (msg=='start'&& step==0)
     {
@@ -58,6 +63,11 @@ function sendMessage(msg){
 		yellow_2[0].classList.toggle('active');
 		green_2[0].classList.toggle('active');
 		red_2[0].classList.toggle('active');
+		yellow_3[0].classList.toggle('active');
+		yellow_dark_3[0].classList.toggle('active');
+		green_4[0].classList.toggle('active');
+		green_dark_4[0].classList.toggle('active');
+		red_5[0].classList.toggle('active');
 		
 	}
 	else if (msg=='stage'&& step==1){
