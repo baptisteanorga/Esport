@@ -223,12 +223,13 @@ div.blue{
 
 div#content{
     position: absolute;
-    top:620px;
+    top:650px;
     left:50px;
     z-index:5;
     width: 900px;
     text-align: center;
     color:white;
+    font-size: 20px;
 }
 div#content.active{
     visibility: hidden;
