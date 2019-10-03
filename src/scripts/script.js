@@ -93,6 +93,7 @@ function sendMessage(msg){
 	const green_4 = document.getElementsByClassName('green_4');
 	const green_dark_4 = document.getElementsByClassName('green_dark_4');
 	const red_5 = document.getElementsByClassName('red_5');
+	const red_tear = document.getElementsByClassName('red_tear');
 
     if (msg==answer[0]&& step==0)
     {
@@ -101,7 +102,7 @@ function sendMessage(msg){
 
 		content.innerHTML=description[0];
 		step++;
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 
 		
 		
@@ -109,7 +110,7 @@ function sendMessage(msg){
 	else if (msg==answer[1]&& step==1){
 		content.innerHTML=description[1];
 		step++;
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 
 		red_1[0].classList.toggle('active');
 		red_dark_1[0].classList.toggle('active');
@@ -121,14 +122,14 @@ function sendMessage(msg){
 	else if (msg==answer[2]&& step==2){
 		content.innerHTML=description[2];
 		step++;
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 		yellow_2[0].classList.toggle('active');
 
 	}
 	else if (msg==answer[3]&& step==3){
 		content.innerHTML=description[3];
 		step++;
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 		green_2[0].classList.toggle('active');
 		red_2[0].classList.toggle('active');
 
@@ -136,7 +137,7 @@ function sendMessage(msg){
 	else if (msg==answer[4]&& step==4){
 		content.innerHTML=description[4];
 		step++;
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 		yellow_3[0].classList.toggle('active');
 		yellow_dark_3[0].classList.toggle('active');
 
@@ -144,7 +145,7 @@ function sendMessage(msg){
 	else if (msg==answer[5]&& step==5){
 		content.innerHTML=description[5];
 		step++;
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 		green_4[0].classList.toggle('active');
 		green_dark_4[0].classList.toggle('active');
 
@@ -153,9 +154,10 @@ function sendMessage(msg){
     else if (msg==answer[6]&& step==6){
 		document.getElementById("time").style.color='green';
 		content.innerHTML=description[6];
-		stepCount.innerHTML = 'Étape : ' + step;
+		stepCount.innerHTML = 'ETAPE ' + step;
 		clearInterval(intervalHandle);
 		red_5[0].classList.toggle('active');
+		red_tear[0].classList.toggle('active');
 
 	}
 	else if (step!=0||step!=6)
