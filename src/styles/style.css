@@ -1,6 +1,11 @@
 body{
     overflow:hidden;
     background-color: #31A7A3;
+
+
+    font-family: 'Roboto', sans-serif;
+
+
 }
 
 input#input{
@@ -27,15 +32,18 @@ h1#time{
     z-index: 10;
 }
 
-div#content{
+div#helper{
     position: absolute;
-    color :#31A7A3;
-    top:140px;
-    left:50px;
-    z-index:5;
+    color: #FFF;
+    top: 20px;
+    left: 50px;
+    z-index: 5;
     width: 900px;
-    text-align: center
+    text-align: center;
+}
 
+div#helper.active{
+    color:#31A7A3;
 }
 
 div#step{
@@ -44,6 +52,7 @@ div#step{
     top:40px;
     left:450px;
     font-size: 30px;
+    letter-spacing: 1.5px;
     
 }
 
@@ -198,7 +207,7 @@ img.red_5{
     top: 1000px;
     left: 793px;
     transition-property: top; 
-    transition-duration: 5s;
+    transition-duration: 10s;
 }
 img.red_5.active{
     top: 260px;
@@ -212,16 +221,16 @@ div.blue{
     width: 900px;
 }
 
-div#helper{
+div#content{
     position: absolute;
-    top:540px;
+    top:620px;
     left:50px;
     z-index:5;
     width: 900px;
     text-align: center;
     color:white;
 }
-div#helper.active{
+div#content.active{
     visibility: hidden;
 }
 
