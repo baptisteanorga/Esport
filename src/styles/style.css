@@ -81,6 +81,12 @@ img.scientist{
     left: 900px;
     top: -70px;
 }
+img.scientist_shadow{
+    width: 420px;
+    height: 800px;
+    left: 1000px;
+    top: -80px;
+}
 
 img.map{
     width: 900px;
