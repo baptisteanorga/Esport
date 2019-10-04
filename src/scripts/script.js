@@ -26,11 +26,11 @@ const description = [
 
 const answer =[
 	`start`,
-	`0,7`,
+	`0.7`,
 	`956`,
 	`chlore`,
 	`osmium`,
-	`0,4`,
+	`0.4`,
 	`5247`,
 ]
 
