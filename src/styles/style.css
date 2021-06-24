@@ -1,314 +1,249 @@
 body{
-    overflow:hidden;
-    background-color: #31A7A3;
-    font-family: 'Roboto', sans-serif;
+    background-color: #1E1D41;
+    margin-left: 0;
+    margin-right:0;
+    width: 100%;
 }
 
-input#input{
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+/** Menu */
+
+img.logo{
+    width: 52px;
+    margin-left:10px;
+}
+
+ul.menu{
+    display: inline-block;
     position: absolute;
-    border-radius: 20px;
-    height: 40px;
-    width: 300px;
-    text-align: center;
-    top: 80px;
-    left: 359px;
-    z-index: 10 ;
 }
 
-h1#time{
-    position: absolute;
-    background-color: white;
-    border-radius: 120px;
-    height: 118px;
-    width: 118px;
-    top: 172px;
-    left: 1014px;
-    text-align: center;
-    line-height: 118px;
-    z-index: 10;
+ul.menu>li{
+    display:inline-block;
+    text-decoration: none;
+    margin-left: 50px;
 }
 
-div#helper{
-    position: absolute;
-    color: #FFF;
-    top: 20px;
-    left: 50px;
-    z-index: 5;
-    width: 900px;
-    text-align: center;
-}
-
-div#helper.active{
-    color:#31A7A3;
-}
-
-div#step{
+ul.menu>li>a{
+    text-decoration: none;
     color:white;
+    font-family:'Montserrat';
+    width: 16px;
+}
+
+header{
+    height: 60px;
+    border-bottom: solid;
+}
+
+ul.media{
+    display: inline-block;
     position: absolute;
-    top:40px;
-    left:450px;
-    font-size: 30px;
-    letter-spacing: 1.5px;
+    right:150px;
+    height: 40px;
     
 }
 
-div.container{
+ul.media>li{
+    display:inline-block;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+ul.media>li>a>img{
+    margin:auto;
+}
+
+/** Sections */
+
+section{
+    color:white;
+}
+
+section h1{
+    font-family: 'Anton', sans-serif;
+}
+
+section h2{
+    font-family: 'MontSerrat';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+section p{
+    font-family: 'MontSerrat';
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.4;
+}
+
+
+/* Section1 */
+
+section.section1{
+    height: 670px;
     position: relative;
 }
-div.container-2{
-    top:120px;
-}
 
-div.bg
-{
+section.section1>img[class*="rightside"]{
     position: absolute;
-    width: 880px;
-    margin-left:2px;
-    height: 555px;
-    background-color: #fff;
+    right:20px;
+    margin-top: 20px;
 }
 
-div.container-2>img{
+section.section1>img.rightside-bottom{
+    bottom:20px;
+}
+
+section.section1>img.leftside{
     position: absolute;
-}
-
-img.scientist{
-    width: 480px;
-    left: 900px;
-    top: -70px;
-}
-img.scientist_shadow{
-    width: 420px;
-    height: 800px;
-    left: 1000px;
-    top: -80px;
-}
-
-img.map{
-    width: 900px;
-}
-
-/** Red_1 */
-img.red_1{
-    width: 74px;
-    top: 320px;
-    left: 196px;
-    transition-property: top; 
-    transition-duration: 2s;
+    top:71px;
+    left:570px;
 }
 
 
-
-img.red_1.active{
-    top: 283px;
+/**Section Actualités*/
+section.actualites{
+    margin-left:20px;
 }
 
-img.red_dark_1{
-    top: 320px; 
-    width: 40px;
-    left: 196px;
-    transition-property: top; 
-    transition-duration: 3s;
+
+ul.news{
+    margin-left:-30px;
 }
 
-img.red_dark_1.active{
-    top: 283px;
+ul.news>li{
+    display: inline-block;
+    text-decoration: none;
+    margin-left:10px;
 }
 
-/** Yellow_2*/
-img.yellow_2{
-    top: 426px;
-    width: 15px;
-    left: 336px;
-    transition-property: top; 
-    transition-duration: 2s;
+
+/** Section Events */
+section.events{
+    margin-left:20px;
 }
 
-img.yellow_2.active{
-    top: 366px;
+ul.matchs{
+    margin-left:-30px;
 }
 
-/** Green_2 */
-img.green_2{
-    top: 426px;
-    width: 15px;
-    left: 376px;
-    transition-property: top; 
-    transition-duration: 4s;
+ul.matchs>li{
+    display: inline-block;
+    text-decoration: none;
+    margin-left:30px;
 }
 
-img.green_2.active{ 
-    top: 366px;
+/** Section Articles */
+
+section.section_articles{
+    margin-left:20px;
+    margin-bottom: 20px;
 }
 
-/** Red_2 */
-img.red_2{
-    top: 426px;
-    width: 15px;
-    left: 417px;
-    transition-property: top; 
-    transition-duration: 3s;
-}
-img.red_2.active{
-    top: 366px;
+section.section_articles>div{
+    width: 510px;
+    height: 430px;
+    background-color: #292859;
+    padding:20px;
+    position:relative;
 }
 
-/** Yellow_3 */
-img.yellow_3{
-    top: 200px;
-    width: 57px;
-    left: 537px;
-    transition-property: top; 
-    transition-duration: 2s;
-}
-
-img.yellow_3.active{
-    top: 153px;
-}
-
-/** Yellow_dark_3 */
-img.yellow_dark_3{
-    top: 200px;
-    width: 24px;
-    left: 557px;
-    transition-property: top; 
-    transition-duration: 2s;
-}
-img.yellow_dark_3.active{
-    top: 153px;
-}
-
-/** Green_4 */
-img.green_4{    
-    top: 423px;
-    width: 76px;
-    left: 564px;
-    transition-property: top; 
-    transition-duration: 2s;
-}
-
-img.green_4.active{
-    top: 383px;
-}
-
-/** Green_dark_4 */
-img.green_dark_4{
-    top: 421px;
-    width: 44px;
-    left: 563px;
-    transition-property: top; 
-    transition-duration: 2s;
-}
-img.green_dark_4.active{
-    top: 381px;
-}
-
-/** Red_5 */
-img.red_5{
-    width: 18px;
-    top: 1000px;
-    left: 793px;
-    transition-property: top; 
-    transition-duration: 10s;
-}
-img.red_5.active{
-    top: 260px;
-}
-
-div.blue{
-    position: absolute;
-    background-color: #31A7A3;
-    top: 470px;
-    height: 900px;
-    width: 900px;
-}
-
-div#content{
-    position: absolute;
-    top:650px;
-    left:50px;
-    z-index:5;
-    width: 900px;
-    text-align: center;
+section.section_articles>div>input#email{
+    height: 24px;
+    width: 380px;
+    background-color: #6D6CA6;
     color:white;
-    font-size: 20px;
-}
-div#content.active{
-    visibility: hidden;
+    font-family: 'MontSerrat';
+    border-radius:6px;
+    
 }
 
-button.help{
+section.section_articles>div>input#email::placeholder{
+    color:#d4d4d4;
+}
+
+section.section_articles>div>input#submit{
+    background: #3137FD;
+    border-radius: 6px;
+    height: 30px;
+    width: 100px;
+    color:white;
+    font-family: "MontSerrat";
+}
+
+section.section_articles>img.leftside{
     position: absolute;
-    background: transparent;
-    border: none !important;
-    font-size:0;
+    top:71px;
+    left:570px;
 }
-
-button.help_1{
-    width: 72px;
-    height: 72px;
-    top: 248px;
-    left: 197px;
-    border-radius: 100px;
-}
-
-button.help_2_1{
-    width: 61px;
-    height: 92px;
-    top: 348px;
-    left: 324px;
-    border-radius: 0;
-}
-
-button.help_2_2{
-    width: 61px;
-    height: 92px;
-    top: 348px;
-    left: 385px;
-    border-radius: 0;
-}
-
-button.help_3{
-    height: 50px;
-    width: 60px;
-    top: 134px;
-    left: 535px;
-}
-
-button.help_4{
-    width: 80px;
-    height: 80px;
-    top: 342px;
-    left: 562px;
-    border-radius: 100px;
-}
-
-button.help_5{
-    width: 21px;
-    height: 177px;
-    top: 262px;
-    left: 791px;
-}
-
-div.red_tear{
+section.section_articles>img[class*="rightside"]{
     position: absolute;
-    top: 229px;
-    left: 796px;
-    width: 10px;
-    height: 10px;
-    border-radius:10px;
-    background-color: #E83F35;
-    animation: drop 4.5s infinite ease-in-out;
-    animation-delay: 2s
+    right:20px;
+    top:71px;
+}
+section.section_articles>img.rightside-bottom{
+    top:310px;
 }
 
-@keyframes drop
-{
-    0%{transform:translateY(0);}
-   
-    100%{transform:translateY(400px);}
+/** Section Team */
+
+section.section_team{
+    background-image: url("../img/bgequipe.png");
+    height: 620px;
+}
+section.section_team>div{
+    width: 510px;
+    padding-left:40px;
+    padding-top:10px;
+    position:relative;
 }
 
-div.red_tear.active{
-    visibility: hidden;
+section.section_team img{
+    width: 120px;
+    cursor: pointer;
+}
+
+/** Section partenaires*/
+
+section[class*="partenaires"]{
+    position: relative;
+}
+
+section.partenaires_left{
+    background-image: url("../img/bgPartner1.png");
+}
+section.partenaires_left>div{
+    width: 600px;
+    position: absolute;
+    top:70px;
+    left:70px;
+}
+section.partenaires_left>img{
+    position: absolute;
+    left:800px;
+    top:-50px;
+}
+
+
+section.partenaires_right{
+    background-image: url("../img/bgPartner2.png");
+    margin-top:0px;
+}
+
+section.partenaires_right>div{
+    width: 600px;
+    position: absolute;
+    top:70px;
+    left:800px;
+}
+
+section.partenaires_right>img{
+    position: absolute;
+    left:100px;
+    top:30px;
+    width: 300px;
 }
